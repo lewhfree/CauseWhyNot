@@ -1,0 +1,13 @@
+CauseWhyNot - CauseWay stub dumper. 
+
+This project dumps the causeway dos extender stub. It might not work, im not sure. 
+
+It assumes that the linker used linearly links causeway at the start, which might not be the case all the time.
+
+
+Options
+=======
+
+First argument is the input filename - include extension
+Second argument is output stub filename
+Optional - third argument is the left of the binary after the stub
