@@ -15,12 +15,12 @@ with open(output, "wb") as out:
         with open(stubInput, "rb") as stub:
             add = 0
             if len(sys.argv) == 5:
-                add = sys.argv[4]
+                add = int(sys.argv[4])
             out.write(stub.read())
             
             if add != 0:
-                print("need bytes", add-len(stub))
-                for i in range(add - len(stub)):
+                print("need bytes", add-len(stub.read()))
+                for i in range(add - len(stub.read())):
                     out.write(b'\x90')
-            out.write(exe)
+            out.write(exe.read())
             print("done")
