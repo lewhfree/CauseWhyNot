@@ -17,3 +17,10 @@ with open(output, "wb") as out:
             if len(sys.argv) == 5:
                 add = sys.argv[4]
             out.write(stub.read())
+            
+            if add != 0:
+                print("need bytes", add-len(stub))
+                for i in range(add - len(stub)):
+                    out.write(b'\x90')
+            out.write(exe)
+            print("done")
