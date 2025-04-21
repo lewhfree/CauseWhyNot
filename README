@@ -1,8 +1,8 @@
-CauseWhyNot - CauseWay stub dumper. 
+CauseWhyNot - CauseWay stub tool.
 
-This project dumps the causeway dos extender stub. It might not work, im not sure. 
-
-It assumes that the linker used linearly links causeway at the start, which might not be the case all the time.
+----------MAIN.PY----------
+Dumps the CauseWay stub off of an executable.
+Dumped stub can be linked using watcom. 
 
 
 Options
@@ -11,3 +11,18 @@ Options
 First argument is the input filename - include extension
 Second argument is output stub filename
 Optional - third argument is the left of the binary after the stub
+
+
+
+----------REBUILD.PY----------
+Grafts a stub onto a dumped executable (preferably one dumped using main.py option 3)
+
+Options
+=======
+
+First option is the input executable filename
+Second option is the stub filename
+Third option is the output executable filename
+Optional - fourth argument is the size the stub should be.
+	 - This is there if the size of the stub you are using is smaller than it should be
+	 - To maintain all offsets, it will pad the end of the stub with nops
