@@ -16,6 +16,9 @@ Optional - third argument is the left of the binary after the stub
 
 ----------REBUILD.PY----------
 Grafts a stub onto a dumped executable (preferably one dumped using main.py option 3)
+I cannot guarantee this will work, so use at your own risk.
+I could not test it, so oh well.
+Also, you need the new stub to be <= the size of the old stub.
 
 Options
 =======
